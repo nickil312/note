@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/photomode_21122020_191211.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Content="Удалить" Margin="10,0,0,10" Grid.Row="2" Height="20" VerticalAlignment="Bottom" Click="DelBut"/>
+        <Button Grid.Column="2" Content="Создать" Grid.Row="2" Margin="0,0,10,10" Height="20" VerticalAlignment="Bottom" Click="CreBut"/>
+        <ListBox x:Name="Noteswindow" Margin="0,0,0,0" Grid.Row="1" Grid.Column="1" SelectionChanged="ChangeSelect" Background="{x:Null}" />
+        <DatePicker x:Name="dateContainer" Margin="10,10,10,5" Grid.ColumnSpan="3" FirstDayOfWeek="Monday" SelectedDateFormat="Short"/>
+        <TextBlock Grid.Column="2" Margin="20,150,10,0" Grid.Row="1" TextWrapping="Wrap" Text="Название заметки" VerticalAlignment="Top" TextAlignment="Center" Height="16" Background="White"/>
+        <TextBlock Grid.Column="2" Margin="20,13,10,0" Grid.Row="1" TextWrapping="Wrap" Text="Описание заметки" VerticalAlignment="Top" TextAlignment="Center" Height="16"/>
+        <TextBox x:Name="NAMEBox" Grid.Column="2" Margin="10,195,9,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="18"/>
+        <TextBox x:Name="DescrBox" Grid.Column="2" Margin="15,45,14,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="18"/>
+    </Grid>
+</Window>
